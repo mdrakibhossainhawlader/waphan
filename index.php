@@ -5,19 +5,20 @@ $YouTube = new YouTube;
 $trending = $YouTube->trending();
 $json = json_decode($trending);
 
+if($json[0][title]){
 foreach($json as $tjson){
-$id = $tjson[id];
-$title = $tjson[title];
-$dur = $tjson[duration];
-$channel = $tjson[channel];
-$view = $tjson[view];
+$tid = $tjson[id];
+$ttitle = $tjson[title];
+$tdur = $tjson[duration];
+$tchannel = $tjson[channel];
+$tview = $tjson[view];
 
 echo '
-<a href="/index.php?id='.$id.'">'.$title.'</a>
-<br>Dur: '.$dur.'<br>
-Channel: '.$channel.'<br>
-View: '.$view.'<br>
+<a href="/index.php?id='.$tid.'">'.$ttitle.'</a>
+<br>Dur: '.$tdur.'<br>
+Channel: '.$tchannel.'<br>
+View: '.$tview.'<br>
 ';
 }
-
+}
 ?>
