@@ -12,7 +12,12 @@ $dur = $tjson[duration];
 $channel = $tjson[channel];
 $view = $tjson[view];
 
-//echo '<a href="/index.php?id='.$id.'">'.$title.'</a><br>Dur: '.$dur.'<br>Channel: '.$channel.'<br>View: '.$view.'<br>';
+echo '
+<a href="/index.php?id='.$id.'">'.$title.'</a>
+<br>Dur: '.$dur.'<br>
+Channel: '.$channel.'<br>
+View: '.$view.'<br>
+';
 }
 
 ?>
