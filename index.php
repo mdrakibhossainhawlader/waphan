@@ -1,5 +1,8 @@
 <?php
 
-include 'func.php';
-echo trending('title');
+require 'func.php';
+$YouTube = new YouTube;
+$trending = $YouTube->trending();
+$json = json_decode($trending);
+
 ?>
