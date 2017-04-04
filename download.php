@@ -18,7 +18,7 @@ ini_set('default_charset',"UTF-8");
 ini_set('user_agent',$uarand."\r\naccept: text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1\r\naccept_charset: $_SERVER[HTTP_ACCEPT_CHARSET]\r\naccept_language: bahasa");
 $f=file('http://'.$_SERVER['SERVER_NAME'].'/ddll.php?id='.$_GET['id'].'');
 $gg=@implode($f);
-$gg=str_replace('&title=', '&title=pidewap.wapka.mobi+-+', $gg);
+$gg=str_replace('&title=', '&title=Waphan.co+-+', $gg);
 
 
 if($_GET['type'] == '720p') {
