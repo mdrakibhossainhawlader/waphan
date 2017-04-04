@@ -9,6 +9,8 @@ $json = json_decode($search);
 $nextToken = $YouTube->nextToken;
 $prevToken = $YouTube->prevToken;
 print_r($json);
+print_r($nextToken);
+print_r($prevToken);
 
 foreach ($json as $youtube) {
   $judul=$youtube->title;
@@ -24,5 +26,5 @@ foreach ($json as $youtube) {
   
   ';
 }
-
+echo '<div class="nav" style="text-align:center;"><a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'" class="btn"> Prev</a><a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'" class="btn">Next </a></div>';
 ?>
