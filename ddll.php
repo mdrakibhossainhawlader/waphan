@@ -30,7 +30,7 @@ $gggg=explode('<dd>', $gg);
 for($i=1;$i<=5;$i++){
 $ggi=maling($gggg[$i], '<span class="spanWid">', '</span>');
 $ggii=maling($gggg[$i], '<a href="', '"');
-$ggiii=print(''.$ggi.' <a href="'.$ggii.'"></a>');
+$ggiii=print('<a href="'.$ggii.'">'.$ggi.'</a><br>');
 }
 
 ?>
