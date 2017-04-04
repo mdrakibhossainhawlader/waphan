@@ -1,6 +1,7 @@
 <?php
 header('Content-type: text/javascript');
 require 'func.php';
+$YouTube = new YouTube;
 $q= 'Ini Talkshow';
 $token= 'Eh0SBXZrb29rGg5DQUFTQWdnQVNCUSUzRCAAWgIIABi83ugY';
 $search = $YouTube->search($q,$token);
