@@ -1,5 +1,5 @@
 <?php
-
+header('Content-type: text/javascript');
 require 'func.php';
 $YouTube = new YouTube;
 $trending = $YouTube->trending();
@@ -12,8 +12,10 @@ foreach ($json as $youtube) {
   $duration=$youtube->duration;
   $channel=$youtube->channel;
   $view=$youtube->view;
+  $bukak="document.write('";
+  $tutup="');";
 
-  echo'<div class="menu2">
+  echo ''.$bukak.'<div class="menu2">
   <table class="otable" width="100%">
   <tbody>
   <tr>
@@ -36,7 +38,7 @@ foreach ($json as $youtube) {
   </tr>
   </tbody>
   </table>
-  </div>';
+  </div>'.$tutup.'';
 }
 
 ?>
