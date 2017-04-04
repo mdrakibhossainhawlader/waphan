@@ -18,7 +18,7 @@ $search = $YouTube->search($q,$token);
 $json = json_decode($search);
 $nextToken = $YouTube->nextToken;
 $prevToken = $YouTube->prevToken;
-
+print_r($json);
 
 
 foreach ($json as $youtube) {
