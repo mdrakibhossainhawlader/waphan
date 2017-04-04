@@ -27,7 +27,7 @@ foreach ($json as $youtube) {
   </td>
   <td style="padding: 4px 6px 4px 6px;>
   <span style=" font-size:="" 13px;"="">
-  <a href="/site_download.xhtml?get-id='.$id.'&name='.$title.'">'.htmlspecialchars($judul).'</a>
+  <a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'">'.htmlspecialchars($judul).'</a>
   <br>
   <span style="font-size: 11px;">
   <i class="fa fa-eye" aria-hidden="true" style="color: #ccc;"></i> '.$view.'
@@ -38,7 +38,9 @@ foreach ($json as $youtube) {
   </tr>
   </tbody>
   </table>
-  </div>'.$tutup.'';
+  </div>'.$tutup.'
+  
+  ';
 }
 
 ?>
