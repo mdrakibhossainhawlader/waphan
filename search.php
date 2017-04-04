@@ -3,15 +3,15 @@ header('Content-type: text/javascript');
 require 'func.php';
 $YouTube = new YouTube;
 
-if(empty($_GET['token'])){
+if(empty($_GET['get-token'])){
   $token=$grab;
 }else{
-  $token=$_GET['token'];
+  $token=$_GET['get-token'];
 }
-if(empty($_GET['q'])){
+if(empty($_GET['get-q'])){
   $q='Ini Talkshow';
 }else{
-  $q=$_GET['q'];
+  $q=$_GET['get-q'];
 } 
 
 $search = $YouTube->search($q,$token);
