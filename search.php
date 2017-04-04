@@ -2,8 +2,8 @@
 header('Content-type: text/javascript');
 require 'func.php';
 $YouTube = new YouTube;
+$token=$grab;
 $q= 'Ini Talkshow';
-$token= '';
 $search = $YouTube->search($q,$token);
 $json = json_decode($search);
 $nextToken = $YouTube->nextToken;
