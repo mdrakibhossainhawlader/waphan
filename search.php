@@ -4,7 +4,7 @@ require 'func.php';
 $YouTube = new YouTube;
 
 if(empty($_GET['token'])){
-  $token='';
+  $token=$grab;
 }else{
   $token=$_GET['token'];
 }
