@@ -2,13 +2,23 @@
 header('Content-type: text/javascript');
 require 'func.php';
 $YouTube = new YouTube;
-$token=$grab;
-$q= 'Ini Talkshow';
+
+if(empty($_GET['token'])){
+  $token='';
+}else{
+  $token=$_GET['token'];
+}
+if(empty($_GET['q'])){
+  $q='Ini Talkshow';
+}else{
+  $q=$_GET['q'];
+} 
+
 $search = $YouTube->search($q,$token);
 $json = json_decode($search);
 $nextToken = $YouTube->nextToken;
 $prevToken = $YouTube->prevToken;
-print_r($json);
+
 
 
 foreach ($json as $youtube) {
@@ -25,12 +35,12 @@ foreach ($json as $youtube) {
   
   ';
 }
-if(empty($nextToken){
+if(empty($nextToken)){
   $nexx='<a class="btn"> Next</a>';
 }else{
   $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'" class="btn">Next </a>';
 }
-if(empty($prevToken){
+if(empty($prevToken)){
   $prevv='<a class="btn"> Prev</a>';
 }else{
   $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'" class="btn"> Prev</a>';
