@@ -1,8 +1,8 @@
 <?php
 header('Content-type: text/javascript');
 require 'func.php';
-$q="Ini Talkshow";
-$token="Eh0SBXZrb29rGg5DQUFTQWdnQVNCUSUzRCAAWgIIABi83ugY";
+$q= 'Ini Talkshow';
+$token= 'Eh0SBXZrb29rGg5DQUFTQWdnQVNCUSUzRCAAWgIIABi83ugY';
 $search = $YouTube->search($q,$token);
 $json = json_decode($search);
 $nextToken = $YouTube->nextToken;
