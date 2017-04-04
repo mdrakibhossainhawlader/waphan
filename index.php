@@ -7,7 +7,7 @@ $json = json_decode($trending);
 print_r($json);
 
 foreach ($json as $youtube) {
-  echo $youtube->title;
+  echo preg_replace('/[^A-Za-z0-9\  ]/', '', $youtube->title);
 }
 
 ?>
