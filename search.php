@@ -30,15 +30,15 @@ foreach ($json as $youtube) {
   $bukak="document.write('";
   $tutup="');";
 
-  echo ''.$bukak.'<div class="fl odd"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'"><div><div><img src="http://ytimg.googleusercontent.com/vi/'.$id.'/default.jpg" width="90" height="60" alt=""></div><div>'.$title.'<br><span><i><small>'.$duration.' </small></i></span></div></div></a></div>'.$tutup.'
+  echo ''.$bukak.'<div class="fl odd"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'"><div><div><img src="http://ytimg.googleusercontent.com/vi/'.$id.'/default.jpg" width="90" height="60" alt="'.$title.'"/></div><div>'.$title.'<br/><span><i><small>'.$duration.' </small></i></span></div></div></a></div>'.$tutup.'
   
   ';
 }
 if(!empty($nextToken)){
-  $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'">Next </a>';
+  $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'">Next Page</a>';
 }
 if(!empty($prevToken)){
-  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'"> Prev</a>';
+  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'"> Previous</a>';
 }
 echo ''.$bukak.'<div class="pgn">'.$prevv.' '.$nexx.'</div>'.$tutup.'';
 ?>
