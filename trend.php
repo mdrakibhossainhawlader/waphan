@@ -15,7 +15,7 @@ foreach ($json as $youtube) {
   $bukak="document.write('";
   $tutup="');";
 
-  echo ''.$bukak.'<div class="fl odd"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'"><div><div><img src="http://ytimg.googleusercontent.com/vi/'.$id.'/default.jpg" width="90" height="60" alt="'.$title.'"/></div><div>'.$title.'<br/><span><small><i>'.$view.'x Views </i></small></span></div></div></a></div>'.$tutup.'
+  echo ''.$bukak.'<div class="fl odd '.$youtube->type.'"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'"><div><div><img src="http://ytimg.googleusercontent.com/vi/'.$id.'/default.jpg" width="90" height="60" alt="'.$title.'"/></div><div>'.$title.'<br/><span><small><i>'.$view.'x Views </i></small></span></div></div></a></div>'.$tutup.'
   
   ';
 }
