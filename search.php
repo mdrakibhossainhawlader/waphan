@@ -38,7 +38,7 @@ if(!empty($nextToken)){
   $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'">Next Page</a>';
 }
 if(!empty($prevToken)){
-  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'"> Previous</a>';
+  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'"> Previous</a> - ';
 }
-echo ''.$bukak.'<div class="pgn">'.$prevv.' '.$nexx.'</div>'.$tutup.'';
+echo ''.$bukak.'<div class="pgn">'.$prevv.''.$nexx.'</div>'.$tutup.'';
 ?>
