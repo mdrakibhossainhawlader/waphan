@@ -30,19 +30,15 @@ foreach ($json as $youtube) {
   $bukak="document.write('";
   $tutup="');";
 
-  echo ''.$bukak.'<div class="i'.$youtube->type.'"><div class="menu2"><table class="otable" width="100%"><tbody><tr><td valign="middle" width="75px" align="center"><div class="imahe"><img src="https://ytimg.googleusercontent.com/vi/'.$id.'/mqdefault.jpg" style="border: 1px solid #222; border-radius: 2px; float: left;" width="95" height="60"><h8><span>'.$duration.'</span></h8></div></td><td style="padding: 4px 6px 4px 6px;><span style="font-size: 13px;"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'">'.htmlspecialchars($title).'</a></span><br/><span style="font-size: 11px;"><i class="fa fa-eye" aria-hidden="true" style="color: #ccc;"></i> '.$view.'<br/><i class="fa fa-calendar" aria-hidden="true" style="color: #ddd;"></i> '.$channel.'</span></td></tr></tbody></table></div></div>'.$tutup.'
+  echo ''.$bukak.'<div class="fl odd"><a href="/site_download.xhtml?get-id='.$id.'&get-name='.$title.'"><div><div><img src="http://ytimg.googleusercontent.com/vi/'.$id.'/default.jpg" width="90" height="60" alt=""></div><div>'.$title.'<br><span><i><small>'.$duration.' </small></i></span></div></div></a></div>'.$tutup.'
   
   ';
 }
-if(empty($nextToken)){
-  $nexx='<a class="btn"> Next</a>';
-}else{
-  $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'" class="btn">Next </a>';
+if(!empty($nextToken)){
+  $nexx='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$nextToken.'">Next </a>';
 }
-if(empty($prevToken)){
-  $prevv='<a class="btn"> Prev</a>';
-}else{
-  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'" class="btn"> Prev</a>';
+if(!empty($prevToken)){
+  $prevv='<a href="/site_search.xhtml?get-q='.$q.'&get-token='.$prevToken.'"> Prev</a>';
 }
-echo ''.$bukak.'<div class="nav" style="text-align:center;">'.$prevv.''.$nexx.'</div>'.$tutup.'';
+echo ''.$bukak.'<div class="pgn">'.$prevv.' '.$nexx.'</div>'.$tutup.'';
 ?>
