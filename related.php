@@ -6,7 +6,6 @@ $YouTube = new YouTube;
 $id=$_GET['id'];
 $related = $YouTube->relatedVideo($id);
 $json = json_decode($related);
-echo print_r($json);
 
 foreach ($json as $youtube) {
   $judul=$youtube->title;
